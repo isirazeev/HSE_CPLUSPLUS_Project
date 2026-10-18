@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/image_processor.dir/image_processor.cpp.o CMakeFiles/image_processor.dir/factory.cpp.o CMakeFiles/image_processor.dir/image.cpp.o CMakeFiles/image_processor.dir/parse_args.cpp.o -o image_processor

@@ -1,0 +1,3 @@
+/Users/ilassirazeev/HSE_C++_Project/image_processor/build/CMakeFiles/image_processor.dir
+/Users/ilassirazeev/HSE_C++_Project/image_processor/build/CMakeFiles/edit_cache.dir
+/Users/ilassirazeev/HSE_C++_Project/image_processor/build/CMakeFiles/rebuild_cache.dir
