@@ -11,10 +11,13 @@ int main(int argc, char** argv) {
     const std::vector<std::string_view> raw_args(argv + 1, argv + argc);
     try {
         const Args args = PargeArgs(raw_args);
-        Image image = ImageRead::Read(args.input);
+        std::vector<std::unique_ptr<Filter>> filters;
         for (const auto& type : args.filters) {
-            auto filter = CreateFilter(type);
-            filter->Apply(image);
+            filters.push_back(CreateFilter(type));
+        }
+        Image image = ImageRead::Read(args.input);
+        for (const auto& flt : filters) {
+            flt->Apply(image);
         }
         ImageWrite::Write(image, args.output);
     } catch (const ERROR::BMPError& Error) {
